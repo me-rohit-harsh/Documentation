@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Question 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- insert banner image and logo as seen in the sample website, the links for the images are provided in the question -->
+
+    <header class="post-header">
+        <div style="margin: 5vh;">
+            <h1> <img class="pin" src="pin.png"> Understanding the fundamentals of state in Javascript</h1>
+            <p><a href="">" Developed by Rohit Kumar "</a></p>
+        </div>
+    </header>
+
+    <div class="post-body ">
+        <div style="text-align: center;">
+            <img class="logo" src="logo.jpg" alt="Brand-logo">
+        </div>
+        <div class="page-wrap">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <main id="main-doc">
+                        <section class="main-section" id="introduction">
+                            <header>Introduction</header>
+                            <hr>
+                            <p><strong>Chapter 3 from the book; Vumbula React — Co-authored by John Kagga</strong></p>
+                            <article>
+                                <p>
+                                    In earlier chapters, we’ve dealt mostly with functional React components that do not
+                                    require state management. This chapter’s main focus is on state, its management, and
+                                    components that utilize it in React.
+                                </p>
+                            </article>
+                        </section>
+                        <section class="section-1 main-section" id="section-1">
+                            <header>What is State?</header>
+                            <hr>
+                            <p>
+                                State is a JavaScript object that stores a component’s dynamic data and determines the
+                                component’s behavior. Because state is dynamic, it enables a component to keep track of
+                                changing information in between renders and for it to be dynamic and interactive.
+                            </p>
+                            <p>
+                                State is similar to props but unlike props, it is private to a component and is
+                                controlled solely by the said component. In the examples from previous chapters, the
+                                behavior of components has primarily depended on the props that are passed down to them.
+                                In those cases, the components that receive the props have no control over them because
+                                props are read-only.
+                            </p>
+                        </section>
+                        <section class=" section-2 main-section" id="section-2">
+                            <header>Adding State to a Class Component</header>
+                            <hr>
+
+                            <code>class <span class="keyword">Greeting</span> extends <span class="keyword">React.Component</span> {
+    render() {
+        <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span><span class="string">I’m a component in need of some state!</span><span class="tag">&lt;/h1&gt;</span>;
+    }
+}</code>
+                            <p>
+                                Adding state to the Greeting component above involves defining within the class
+                                component, a constructor function that assigns the initial state using this.state.
+                            </p>
+
+                            <code>class <span class="keyword">Greeting</span> extends <span class="keyword">React.Component</span> {
+    constructor(props) {
+        super(props);
+        <span class="comment">// Define your state object here</span>
+        <span class="keyword">this</span>.state = {
+            name: '<span class="string">Jane Doe</span>'
+        };
+    }
+    render() {
+        <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>Hello this.state.name<span class="tag">&lt;/h1&gt;</span>;
+    }
+} </code>
+                        </section>
+                        <section class="third-section main-section" id="third-section">
+                            <header>Investigating State using React Dev Tools</header>
+                            <hr>
+                            <p>
+                                The devtools are available for download on both Mozilla Firefox Add-ons and the Chrome
+                                Web Store. Follow the appropriate link to install the devtools depending on which
+                                browser you have installed on your computer.
+                            </p>
+                            <p>
+                                Throughout the rest of this book, Chrome will be used as the browser of choice. In order
+                                to confirm successful installation of the devtools on Chrome, open the developer tools
+                                window using <span class="key-button">Cmd+Opt+I</span> on a Mac or <span
+                                    class="key-button">Ctrl+Alt+I</span>
+                                on a windows PC. You should now see a
+                                React tab.
+                            </p>
+                        </section>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
